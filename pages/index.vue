@@ -1,9 +1,7 @@
 <script setup>
     import {useI18n} from "vue-i18n";
 
-    const { t } = useI18n({
-        useScope: 'local'
-    });
+    const { t } = useI18n({});
 
     provide('pageMeta', {
         title: computed(() => t('subTitle'))
@@ -26,7 +24,7 @@
     </div>
 </template>
 
-<i18n lang="json">
+<i18n global>
 {
     "en": {
         "title": "Hello",
